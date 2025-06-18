@@ -1,0 +1,773 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+body p {
+    line-height: 1.4;
+}
+
+:root {
+    --p1: #083D5D;
+}
+
+.register {
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 1;
+
+}
+
+.register::after {
+    z-index: -1;
+    content: "";
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    background: url("https://cdn.dribbble.com/userupload/42098016/file/original-95161d967fb850a082d81e3143129a34.gif");
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    left: 100%;
+    border-radius: 320px;
+    top: 100%;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.register:hover::after {
+    transform: translate(-50%, -50%) scale(2);
+
+}
+
+.register:hover {
+    color: white;
+
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    opacity: .75;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+}
+
+header nav a:hover {
+    opacity: 1;
+    color: var(--p1);
+    font-weight: 800;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: calc(0px - 8px);
+    background: var(--p1);
+    width: 0%;
+    height: 2px;
+    transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+.register {
+    padding: 16px;
+    background: var(--p1);
+    color: white;
+    text-decoration: none;
+    position: relative;
+    border-radius: 8px;
+}
+
+.register-banner {
+    background: white;
+    color: black;
+}
+
+.banner {
+    width: 100%;
+    height: 70vh;
+    background: #000;
+    color: white;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    background: url("https://us.123rf.com/450wm/tchastudio/tchastudio2309/tchastudio230961195/214295396-abstract-light-background-wallpaper-colorful-gradient-blurry-soft-smooth-pastel-colors-motion-design.jpg?ver=6");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.register.register-banner:nth-child(1) {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.banner h1 {
+    font-size: 48px;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 32px;
+    position: relative;
+}
+
+section .content-include {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content img {
+    height: 320px;
+    width: 320px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    background: rgb(247, 241, 228);
+    width: 90%;
+    margin: 48px auto;
+    padding: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    border: 1px solid #c6763450;
+}
+
+section .content-include h3 {
+    color: #083D5D;
+}
+
+section .content-include h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+section h1 {
+    font-size: 36px;
+}
+
+section .content-include p:nth-child(3) {
+    color: #C67534;
+}
+
+section .content-include p:nth-child(4) {
+    line-height: 1.4;
+}
+
+section .register {
+    background: black;
+    color: white;
+    line-height: normal;
+}
+
+section .register.register-banner:nth-child(1) {
+    background: transparent;
+    color: black;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid black;
+}
+
+section .register.register-banner:nth-child(1):hover {
+    color: white;
+    border: 1px solid white;
+}
+
+section .btns {
+    justify-content: left;
+}
+
+.prize {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.prize-contain {
+    width: 320px;
+    background: #fff;
+    padding: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+
+}
+
+.prize-contain:nth-child(1),
+.prize-contain:nth-child(3) {
+    scale: .9;
+}
+
+.workflow {
+    background: rgb(247, 241, 228);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 32px;
+    gap: 48px;
+}
+
+.info-holder {
+    width: 320px;
+    height: fit-content;
+    padding: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
+    border: 2px solid #C67534;
+    line-height: 1.4;
+    background: white;
+}
+
+.info-holder p:nth-child(2) {
+    text-align: left;
+}
+
+.parent-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.obj {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 64px 32px;
+    gap: 48px;
+    background: var(--p1);
+    background-size: cover;
+
+
+}
+
+.obj h3 {
+    color: var(--p1);
+    font-weight: 600;
+}
+
+.obj h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.obj .conta {
+    width: 356px;
+    height: 400px;
+    border-radius: 8px;
+    padding: 32px;
+    background: #fff;
+    border-radius: 8px;
+    border: #C67534 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    text-align: center;
+}
+
+.obj h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.container-things {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    line-height: 1.4;
+}
+
+.timeline-container {
+    padding: 0 16px 16px 16px;
+    height: 178px;
+    width: 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.timeline-container p:nth-child(2) {
+    color: #C67534;
+}
+
+.timeline-container p:nth-child(3) {
+    opacity: .5;
+}
+
+.timeline-container::after {
+    transform: translate(-50%, -50%);
+    left: -32px;
+    top: 8px;
+    position: absolute;
+    content: "";
+    width: 8px;
+    border: 8px solid var(--p1);
+    height: 8px;
+    background: white;
+    border-radius: 50px;
+}
+
+.timeline {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 32px;
+    gap: 64px;
+}
+
+.line {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: #C67534;
+    left: calc(0px - 32px);
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+
+.holder-timeline {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.both-timeline-holder {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 64px;
+    padding-left: 32px;
+}
+
+.Guidelines {
+    background: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 32px auto;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.Guidelines .register {
+
+    background: white;
+    color: #000;
+    line-height: normal;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.Guidelines .register:hover {
+    color: white;
+}
+
+.Guidelines div {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.fqs {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+    padding: 64px 32px;
+}
+
+.faq {
+    background: rgb(247, 241, 228);
+    padding: 32px;
+    width: 90%;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+    margin: auto;
+}
+
+.faq p:nth-child(1) {
+    background: black;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.faqs-holder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Question-holder {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: left;
+    gap: 32px;
+    align-items: flex-start;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    height: calc(0px + 52px);
+
+}
+
+.Question-holder-ince {
+    height: 100px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.Question-holder p:nth-child(1) {
+    line-height: normal;
+    padding: 16px;
+}
+
+.content.last img {
+    object-position: left;
+}
+
+.arrw-up {
+    cursor: pointer;
+    rotate: 0deg;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.arrw {
+    rotate: 180deg;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 32px;
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    background: #000;
+    color: white;
+}
+
+footer h4,
+footer h3 {
+    font-weight: 600;
+    color: #fff;
+    opacity: .50;
+}
+
+footer div:nth-child(1) {
+    width: 400px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    width: fit-content;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    line-height: 1.4;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+}
+
+footer .social-media img {
+    background: white;
+    border-radius: 128px;
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+    object-position: center;
+    padding: 4px;
+}
+
+.bottom-info {
+    width: 100%;
+    color: white;
+    background: #1e1e1e;
+    padding: 16px 32px;
+    text-align: center;
+    height: fit-content;
+
+}
+
+.register.register-banner.locate {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    align-self: flex-end;
+}
+
+.register.register-banner.locate img {
+    height: 32px;
+    width: 32px;
+}
+
+.rev-ans {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+nav img {
+    display: none;
+}
+
+header .bar {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    header nav {
+        position: fixed;
+        z-index: 100;
+        background: #fff;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        left: -50%;
+        padding: 32px;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        top: 50%;
+        width: 0%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    header{
+        padding: 32px;
+    }
+    .banner{
+        height: fit-content;
+        text-align: left;
+    }
+    .banner h1{
+        font-size: 36px;
+    }
+    .banner .btns{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    header .bar {
+        display: block;
+    }
+    header img:nth-child(1) {
+        height: 42px;
+        
+    }
+    header .register{
+        display: none;
+    }
+    .content{
+        flex-direction: column-reverse;
+        padding: 32px;
+
+    }
+    .content img{
+        height: 240px;
+        width: 100%;
+        object-fit: cover;
+    }
+    section .content-include h1{
+        font-size: 24px;
+    }
+    .content .btns{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .prize h1, .workflow h1{
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .parent-holder{
+        flex-direction: column;
+    }
+    .parent-holder img{
+        rotate: 90deg;
+    }
+    .container-things{
+        flex-direction: column;
+        width: 100%;
+    }
+    .container-things .conta{
+        width: 100%;
+    }
+    .timeline h1{
+        text-align: center;
+    }
+    .both-timeline-holder{
+        flex-direction: column;
+    }
+    .timeline-container{
+        width: 100%;
+    }
+    .timeline-container h2{
+        font-size: 18px;
+    }
+    .Guidelines{
+        flex-direction: column;
+        padding: 32px;
+        align-items: flex-start;
+    }
+    .Guidelines div{
+        width: 100%;
+    }
+    .faq{
+        width: 100%;
+    }
+    .fqs h1{
+        text-align: center;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer img{
+        align-self: center;
+    }
+    footer div:nth-child(5){
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .register.register-banner.locate{
+        align-self: center;
+        margin: 32px 0;
+    }
+
+    
+
+}
